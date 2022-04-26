@@ -1,0 +1,11 @@
+{
+  "groups": [
+    {
+      "name": "application",
+      "type": "com.nyce.tube.config.ApplicationProperties",
+      "sourceType": "com.nyce.tube.config.ApplicationProperties"
+    }
+  ],
+  "properties": [],
+  "hints": []
+}

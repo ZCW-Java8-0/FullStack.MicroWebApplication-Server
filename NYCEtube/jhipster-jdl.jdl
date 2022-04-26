@@ -1,0 +1,16 @@
+
+entity Videos {
+	name String required maxlength(200)
+    date ZonedDateTime
+    video Blob
+}
+
+entity Comment {
+	date ZonedDateTime
+    text String
+}
+
+relationship OneToMany {
+	Videos{comment(videoId)} to Comment
+}
+
