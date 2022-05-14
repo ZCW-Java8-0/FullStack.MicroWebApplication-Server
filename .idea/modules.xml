@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/NYCEtube.iml" filepath="$PROJECT_DIR$/.idea/NYCEtube.iml" />
+      <module fileurl="file://$PROJECT_DIR$/NYCEtube/nyc-etube.iml" filepath="$PROJECT_DIR$/NYCEtube/nyc-etube.iml" />
+    </modules>
+  </component>
+</project>

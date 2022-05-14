@@ -1,0 +1,40 @@
+
+entity Videos {
+    name String required maxlength(200)
+    url String 
+    date ZonedDateTime
+    video Blob required 
+    categories Categories
+    thumbnail ImageBlob required
+}
+
+entity Comment {
+    date ZonedDateTime
+    text String
+}
+
+enum Categories {
+    ARTSCRAFTS("ArtsCrafts")
+    FASHIONBEAUTY("FashionBeauty")
+    FOOD("Food")
+    GAMING("Gaming")
+    KIDS("Kids")
+    LEARNING("Learning")
+    MOVIESTV("MoviesShows")
+    MUSIC("Music")
+    NEWS("News")
+    PEOPLEBLOGS("PeopleBlogs")
+    PETSANIMALS("PetsAnimals")
+    SCITECH("ScienceTechnology")
+    SPORTS("Sports")
+    TRAVEL("Travel")
+}
+
+relationship ManyToOne {
+    Videos{user(login)} to User
+    Comment{user(login)} to User
+    Comment{videos(videosId)} to Videos
+
+}
+
+service all with serviceImpl

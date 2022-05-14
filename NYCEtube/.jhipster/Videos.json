@@ -1,0 +1,55 @@
+{
+  "applications": "*",
+  "changelogDate": "20220427010845",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "videos",
+  "fields": [
+    {
+      "fieldName": "name",
+      "fieldType": "String",
+      "fieldValidateRules": ["required", "maxlength"],
+      "fieldValidateRulesMaxlength": "200"
+    },
+    {
+      "fieldName": "url",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "date",
+      "fieldType": "ZonedDateTime"
+    },
+    {
+      "fieldName": "video",
+      "fieldType": "byte[]",
+      "fieldTypeBlobContent": "any",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "categories",
+      "fieldType": "Categories",
+      "fieldValues": "ARTSCRAFTS (ArtsCrafts),FASHIONBEAUTY (FashionBeauty),FOOD (Food),GAMING (Gaming),KIDS (Kids),LEARNING (Learning),MOVIESTV (MoviesShows),MUSIC (Music),NEWS (News),PEOPLEBLOGS (PeopleBlogs),PETSANIMALS (PetsAnimals),SCITECH (ScienceTechnology),SPORTS (Sports),TRAVEL (Travel)"
+    },
+    {
+      "fieldName": "thumbnail",
+      "fieldType": "byte[]",
+      "fieldTypeBlobContent": "image",
+      "fieldValidateRules": ["required"]
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "Videos",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityField": "login",
+      "otherEntityName": "user",
+      "otherEntityRelationshipName": "videos",
+      "relationshipName": "user",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "service": "serviceImpl"
+}
